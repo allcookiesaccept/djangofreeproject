@@ -5,8 +5,21 @@
 {% block content %}
     <div class="features">
         <h1>{{ title }}</h1>
+        {% filter upper %}
         <p>Hello stranger, can you tell us where you’ve been?</p>
         <p>More importantly however did you come to be here?</p>
         <button class="btn btn-warning">To page about us</button>
+        {% endfilter %}
+
+        {% for el in values %}
+            {% if el != 1 %}
+                <p>{{ el|upper }}</p>
+            {% endif %}
+        {% endfor %}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor %}
+
     </div>
 {% endblock %}

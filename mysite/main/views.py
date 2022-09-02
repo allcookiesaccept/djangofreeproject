@@ -4,7 +4,12 @@ def index(request):
 
     data = {
         'title': 'Main Page!',
-        'values': ['Good day today']
+        'values': ['Good day today', 'don\'t you think?'],
+        'obj': {
+            'age': 33,
+            'name': 'Billy D'
+
+        }
     }
 
     return render(request, 'main/index.html', data)
